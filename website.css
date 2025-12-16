@@ -1,0 +1,861 @@
+/* ===== GLOBAL SETTINGS ===== */
+body {
+    /* Set a deep navy background to align with EnginuityIQ's modern tech aesthetic */
+    background-color: #050815;
+    /* Use a clean, standard sans-serif font for readability */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Set the default text color to a very light gray for contrast on dark background */
+    color: #f5f5f7;
+    /* Remove default browser margin around the page edges */
+    margin: 0;
+    /* Remove default browser padding */
+    padding: 0;
+}
+
+/* Make all links use the brand blue by default */
+a {
+    /* Use a bright electric blue for links */
+    color: #00aaff;
+    /* Remove underlines from links, looks better */
+    text-decoration: none;
+}
+
+/* When hovering over links change color */
+a:hover {
+    /* Lighter blue on hover for visual feedback */
+    color: #4ac6ff;
+}
+
+/* ===== HEADER AND NAVIGATION ===== */
+
+/* Style the outer header area */
+.site-header {
+    /* Use a very dark navy to distinguish the header from the rest */
+    background-color: #03040c;
+    /* Add padding top and bottom */
+    padding: 16px 0;
+    /* Add a bottom border to separate header from content */
+    border-bottom: 1px solid #101322;
+}
+
+/* Inner header container to keep content centered and aligned */
+.header-inner {
+    /* Limit the maximum width so content doesn't stretch too wide */
+    max-width: 1100px;
+    /* Center the container horizontally */
+    margin: 0 auto;
+    /* flexbox to place logo on the left and nav on the right */
+    display: flex;
+    /* Vertically center items in the header */
+    align-items: center;
+    /* Small space between logo and navigation */
+    justify-content: space-between;
+}
+
+/* Style for the logo container */
+.logo {
+    /* Display logo inline as a flexible box for mark & text */
+    display: flex;
+    /* Align logo mark and text vertically centered */
+    align-items: center;
+    /* Small gap between mark and brand name */
+    gap: 8px;
+}
+
+/* Stylized "E" in the logo === may want to add an actual logo variant later */
+.logo-mark {
+    /* electric blue color for the logo mark background */
+    background-color: #00aaff;
+    /* Amber gold for the letter inside to echo the EnginuityIQ brand */
+    color: #ffc857;
+    /* Make 'E' slightly larger */
+    font-weight: bold;
+    padding: 6px 10px;
+    /* Round the corners slightly == looks better */
+    border-radius: 4px;
+}
+
+/* text portion of the logo */
+.logo-text {
+    /* Make the brand name bold */
+    font-weight: bold;
+    /* Increase font size so brand stands out */
+    font-size: 1.1rem;
+    /* Set the color to light gray for contrast */
+    color: #f5f5f7;
+}
+
+/* main navigation */
+.main-nav ul {
+    /* Remove bullets */
+    list-style: none;
+    /* Remove default browser margin */
+    margin: 0;
+    /* Remove default browser padding */
+    padding: 0;
+    /* Use flexbox to arrange nav items in a row */
+    display: flex;
+    /* Create space between each nav item */
+    gap: 16px;
+}
+
+/* Style for each navigation list item */
+/* Might use this to customize each li later == maybe */
+.main-nav li {
+
+}
+
+/* Style for navigation links */
+.main-nav a {
+    /* smaller font size for nav items */
+    font-size: 0.95rem;
+    /* Use a light text color for visibility on dark background */
+    color: #f5f5f7;
+    /* small amount of letter spacing to look better */
+    letter-spacing: 0.03em;
+}
+
+/* Change nav link appearance on hover */
+.main-nav a:hover {
+    /* Use amber gold on hover to align with the brand accent color */
+    color: #ffc857;
+}
+
+/* ===== HERO SECTION ===== */
+/* Style the hero section that holds the video area and text */
+.hero {
+    /* Limit the width to keep content readable */
+    max-width: 1100px;
+    /* Center the hero section on the page */
+    margin: 32px auto;
+    /* Use flexbox to place video area and text side by side */
+    display: flex;
+    /* Add space between the video column and the text column */
+    gap: 24px;
+    /* Align items to the top of the row */
+    align-items: flex-start;
+}
+
+/* Style for the left side video placeholder */
+.hero-video {
+    /* Take up more space than the text to emphasize the visual */
+    flex: 1.2;
+    /* Set a background color that is darker for contrast */
+    background-color: #070b1f;
+    /* Add a border for a video frame */
+    border: 1px solid #10152b;
+    min-height: 220px;
+    /* Center the text inside the box */
+    display: flex;
+    /* Horizontally center content */
+    justify-content: center;
+    /* Vertically center content */
+    align-items: center;
+    /* Add padding */
+    padding: 16px;
+    /* Round the corners */
+    border-radius: 8px;
+}
+
+/* Style the text inside the video placeholder */
+.hero-video p {
+    /* light gray  */
+    color: #9ca3c0;
+    /* Slightly larger font == looks better */
+    font-size: 0.95rem;
+}
+
+/* Style for the right side hero text area */
+.hero-text {
+    /*slightly less width than the video area */
+    flex: 1;
+}
+
+/* Style for the main hero heading */
+.hero-text h1 {
+    /* bright electric blue for main heading */
+    color: #00aaff;
+    /* Increase font size for hero prominence */
+    font-size: 2rem;
+    /* Add space below the heading */
+    margin-bottom: 12px;
+}
+
+/* Style for hero paragraphs */
+.hero-text p {
+    /* line height for readability */
+    line-height: 1.6;
+    /*soft gray color so text is easy to read on dark background */
+    color: #d0d4e6;
+    /* Add space between paragraphs */
+    margin-bottom: 10px;
+}
+
+/* Style for the primary call-to-action button */
+.btn-primary {
+    /* Display as inline-block so padding works like a button */
+    display: inline-block;
+    /* Use bright electric blue for button background */
+    background-color: #00aaff;
+    /* Use dark navy for button text for contrast */
+    color: #050815;
+    /* Add padding */
+    padding: 10px 18px;
+    /* Rround the corners */
+    border-radius: 4px;
+    /* Make button text bold */
+    font-weight: bold;
+    /* Add top margin */
+    margin-top: 10px;
+}
+
+/* Change button color on hover */
+.btn-primary:hover {
+    /* Slighter blue background on hover */
+    background-color: #27b8ff;
+    /* Darker text color if desired */
+    color: #02040a;
+}
+
+/* ===== LOGO STRIP SECTION ===== */
+
+/* Style for the logo strip section wrapper */
+.logo-strip {
+    /* Add top and bottom spacing around the section */
+    padding: 32px 0;
+    /* Use a different dark background to separate from hero area */
+    background-color: #040618;
+}
+
+/* Style for section titles used in multiple places */
+.section-title {
+    /* Center the title text */
+    text-align: center;
+    /* amber gold color for section headings */
+    color: #ffc857;
+    /* Increase font size */
+    font-size: 1.3rem;
+    /* Add bottom margin to separate title from content */
+    margin-bottom: 18px;
+}
+
+/* Container for the row of partner logos */
+.logo-strip .logo-row {
+    /* Limit width for readability */
+    max-width: 1100px;
+    /* Center horizontally */
+    margin: 0 auto;
+    /* Use flexbox to line logos up in a row */
+    display: flex;
+    /* Spread logos out evenly across the row */
+    justify-content: space-between;
+    /* Allow wrapping on smaller screens */
+    flex-wrap: wrap;
+    /* Add gap between logos */
+    gap: 12px;
+}
+
+/* Style for each individual partner logo placeholder box */
+.partner-logo {
+    /* Give each logo box a fixed minimum width */
+    min-width: 110px;
+    /* Center placeholder text inside */
+    text-align: center;
+    /* Add padding so text has breathing room */
+    padding: 10px;
+    /* Use a muted background so it feels like a logo tile */
+    background-color: #070b1f;
+    /* Round the corners slightly */
+    border-radius: 6px;
+    /* Use a subtle border to make tiles stand out */
+    border: 1px solid #151a33;
+    /* Use lighter gray text for logo placeholders */
+    color: #c9cee2;
+    /* Set smaller font size to suggest a compact logo label */
+    font-size: 0.85rem;
+}
+
+
+/* ===== SUPPORT SECTION ===== */
+
+/* Wrapper for the support section that holds image and text side by side */
+.support-section {
+    /* Limit width of content */
+    max-width: 1100px;
+    /* Center horizontally */
+    margin: 32px auto;
+    /* Use flexbox to create two columns */
+    display: flex;
+    /* Add space between image column and text column */
+    gap: 24px;
+    /* Align content at the top of the row */
+    align-items: flex-start;
+}
+
+/* Style for the left support image */
+.support-image {
+    /* Use flex value so this column shares space with the text column */
+    flex: 1;
+    /* Use a dark background that slightly differs from body for contrast */
+    background-color: #070b1f;
+    /* Add a border */
+    border: 1px solid #10152b;
+    /* Set a minimum height  */
+    min-height: 180px;
+    /* Center the text */
+    display: flex;
+    /* Center horizontally */
+    justify-content: center;
+    /* Center vertically */
+    align-items: center;
+    /* Add padding */
+    padding: 16px;
+    /* Round the corners */
+    border-radius: 8px;
+}
+
+/* Style for the text inside the support image placeholder */
+.support-image p {
+    color: #9ca3c0;
+    font-size: 0.9rem;
+}
+
+/* Style for the right side support content */
+.support-content {
+    /* column to take up a little moore space than the image */
+    flex: 1.2;
+}
+
+/* Style for support section heading */
+.support-content h2 {
+    /* amber gold */
+    color: #ffc857;
+    /* Add margin */
+    margin-bottom: 12px;
+}
+
+/* Style for paragraphs in the support section */
+.support-content p {
+    /* smaller font size for body text */
+    font-size: 0.95rem;
+    /* Line height for reading */
+    line-height: 1.6;
+    /* Use soft gray text color */
+    color: #d0d4e6;
+    /* Add space between paragraphs */
+    margin-bottom: 10px;
+}
+
+/* ===== ACCOLADES SECTION ===== */
+
+/* Wrapper for the accolades section */
+.accolades-section {
+    /* Add vertical paddin */
+    padding: 32px 0 40px 0;
+    /* Different background for visual separation */
+    background-color: #030511;
+}
+
+/* Container for the grid of accolade cards */
+.accolade-grid {
+    /* Limit width  */
+    max-width: 1100px;
+    /* Center the grid container */
+    margin: 0 auto;
+    /* Use flexbox to place cards in a row */
+    display: flex;
+    /* Allow cards to wrap to the next line on smaller screens */
+    flex-wrap: wrap;
+    /* Add gap between cards */
+    gap: 18px;
+}
+
+/* Style for each individual accolade card */
+.accolade-card {
+    /* Allow card to grow but keep a minimum width */
+    flex: 1 1 220px;
+    /* Use dark background for cards */
+    background-color: #070b1f;
+    /* Add padding inside the card */
+    padding: 16px;
+    /* Round card corners */
+    border-radius: 8px;
+    /* Add a border to better define the card edges */
+    border: 1px solid #141933;
+}
+
+/* Style for accolade card headings */
+.accolade-card h3 {
+    /* Electric blue to highlight the accolade title */
+    color: #00aaff;
+    /* Make the text  larger */
+    font-size: 1rem;
+    /* Add space at bottom */
+    margin-bottom: 8px;
+}
+
+/* Style for accolade card text */
+.accolade-card p {
+    /* Use soft gray for body text */
+    color: #d0d4e6;
+    /* Set a line height for readability */
+    line-height: 1.5;
+    /* smaller font for supporting text */
+    font-size: 0.9rem;
+}
+
+/* ===== FOOTER ===== */
+
+/* Style the footer at the bottom of the page */
+.site-footer {
+    /* Use a very dark background to close the page */
+    background-color: #020309;
+    /* Center footer content */
+    text-align: center;
+    /* Add padding top and bottom */
+    padding: 16px 8px;
+    /* Add a subtle top border to separate from content above */
+    border-top: 1px solid #101322;
+}
+
+/* Style for footer paragraphs */
+.site-footer p {
+    /* text color in the footer */
+    color: #a3a7c0;
+    /* Reduced font size */
+    font-size: 0.85rem;
+    /* Add small margin between lines */
+    margin: 2px 0;
+}
+
+/* ==== RESPONSIVE SCREEN ADJUSTMENTS ==== */
+/* When the screen width is tablet/phone we stack columns vertically */
+@media (max-width: 768px) {
+    /* Stack hero section columns on top of each other */
+    .hero {
+        /* Change flex direction from row to column */
+        flex-direction: column;
+    }
+
+    /* Stack support section columns vertically */
+    .support-section {
+        /* Change flex direction from row to column */
+        flex-direction: column;
+    }
+
+    /* Center header content on small screens */
+    .header-inner {
+        /* Allow logo and nav to wrap */
+        flex-direction: column;
+        /* Align items to the center */
+        align-items: center;
+        /* Add vertical space between logo and nav */
+        gap: 12px;
+    }
+}
+
+/* ===== PAGE 2: ARTIFICIAL INTELLIGENCE ===== */
+
+/* Wrapper for the top "Artificial Intelligence" intro section */
+.page-hero {
+    background-color: #040618;
+    /* Add vertical padding  */
+    padding: 32px 0;
+}
+
+/* Inner container to control */
+.page-hero-inner {
+    /* Limit maximum width */
+    max-width: 900px;
+    /* Center the container horizontally */
+    margin: 0 auto;
+    /* Add horizontal padding  */
+    padding: 0 16px;
+}
+
+/* Style for the main page heading "Artificial Intelligence" */
+.page-hero-inner h1 {
+    color: #00aaff;
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+/* Style for paragraphs in the page hero section */
+.page-hero-inner p {
+    /* line height for reading large blocks of text */
+    line-height: 1.7;
+    /* Soft gray text for good contrast but gentle on the eyes */
+    color: #d0d4e6;
+    /* Smaller than the heading */
+    font-size: 0.97rem;
+    /* Add space under each paragraph */
+    margin-bottom: 10px;
+}
+
+/* Wrapper for the case studies section */
+.case-studies {
+    /* Add vertical padding */
+    padding: 32px 0;
+    /* Use a very dark navy background to stand out */
+    background-color: #030511;
+}
+
+/* Grid container that holds the 3 case study cards */
+.case-grid {
+    /* Limit width of case study row */
+    max-width: 1100px;
+    /* Center the grid horizontally */
+    margin: 0 auto;
+    /* Add horizontal padding for mobile friendliness */
+    padding: 0 16px;
+    /* Use flexbox to place cards next to each other */
+    display: flex;
+    /* Allow cards to wrap to next line on small screens */
+    flex-wrap: wrap;
+    /* Add gap between cards */
+    gap: 18px;
+}
+
+/* Individual case study card styling */
+.case-card {
+    /* Let each card grow and shrink but keep a minimum width */
+    flex: 1 1 260px;
+    /* Use a dark background for the card itself */
+    background-color: #070b1f;
+    /* Add padding inside the card so text is not at the edge */
+    padding: 18px;
+    /* ound corners */
+    border-radius: 8px;
+    /* Add a border to define the edges of the card */
+    border: 1px solid #141933;
+}
+
+/* Heading style for each case study title */
+.case-card h3 {
+    /* Use amber gold  */
+    color: #ffc857;
+    /* larger than body text */
+    font-size: 1rem;
+    /* Add margin under the title */
+    margin-bottom: 8px;
+}
+
+/* Body text inside each case study card */
+.case-card p {
+    /* Use soft gray text color for readability */
+    color: #d0d4e6;
+    /* Use a readable line height for multi-line text */
+    line-height: 1.6;
+    /* Slightly smaller font size for supporting information */
+    font-size: 0.9rem;
+}
+
+/* Wrapper for AI Impact section */
+.ai-impact {
+    /* Use a slightly different deep navy background to visually separate */
+    background-color: #020309;
+    /* Add top and bottom padding */
+    padding: 32px 0 40px 0;
+}
+
+/* Inner container for AI Impact text */
+.ai-impact-inner {
+    /* Limit width of AI Impact content */
+    max-width: 900px;
+    /* Center the content horizontally */
+    margin: 0 auto;
+    /* Add horizontal padding for small screens */
+    padding: 0 16px;
+}
+
+/* Style for AI Impact heading */
+.ai-impact-inner h2 {
+    /* Use electric blue to match other section headers */
+    color: #00aaff;
+    /* Slightly larger than normal text */
+    font-size: 1.4rem;
+    /* Add margin below heading */
+    margin-bottom: 12px;
+}
+
+/* Style for the AI Impact paragraph text */
+.ai-impact-inner p {
+    /* Use soft gray color for body copy */
+    color: #d0d4e6;
+    /* Comfortable reading line height */
+    line-height: 1.7;
+    /* Slightly smaller font size than headings */
+    font-size: 0.97rem;
+}
+
+/* ===== PAGE 3: CYBERSECURITY ===== */
+
+/* Wrapper for the Global Threat Report intro section */
+.threat-hero {
+    /* Slightly different dark background to separate this section visually */
+    background-color: #040618;
+    /* Add vertical padding above and below the section */
+    padding: 32px 0;
+}
+
+/* Inner container for the Global Threat Report content */
+.threat-hero-inner {
+    /* Limit width so the text stays readable */
+    max-width: 900px;
+    /* Center the content horizontally */
+    margin: 0 auto;
+    /* Add horizontal padding for smaller screens */
+    padding: 0 16px;
+}
+
+/* Style for the main heading "Global Threat Report" */
+.threat-hero-inner h1 {
+    /* Use electric blue as the heading color to match brand */
+    color: #00aaff;
+    /* Make the heading visually prominent */
+    font-size: 2rem;
+    /* Add margin below heading to separate from paragraphs */
+    margin-bottom: 12px;
+}
+
+/* Style for the intro paragraphs in the Global Threat Report section */
+.threat-hero-inner p {
+    /* Use comfortable spacing between lines */
+    line-height: 1.7;
+    /* Use soft gray text color for readability */
+    color: #d0d4e6;
+    /* Slightly bigger than default text size */
+    font-size: 0.97rem;
+    /* Add margin below each paragraph */
+    margin-bottom: 10px;
+}
+
+/* Wrapper for the CyberRisk service tiles (Gap Analysis + stack) */
+.threat-services {
+    /* Use a deep navy background to distinguish this section */
+    background-color: #030511;
+    /* Add vertical padding */
+    padding: 32px 0;
+}
+
+/* Grid container for the CyberRisk service tiles */
+.threat-grid {
+    /* Limit overall width of the tile grid */
+    max-width: 1100px;
+    /* Center the grid on the page */
+    margin: 0 auto;
+    /* Add horizontal padding for smaller screens */
+    padding: 0 16px;
+    /* Use flexbox to arrange tiles */
+    display: flex;
+    /* Allow tiles to wrap to new lines on smaller displays */
+    flex-wrap: wrap;
+    /* Add gap between tiles */
+    gap: 18px;
+}
+
+/* Individual CyberRisk service tile styling */
+.threat-card {
+    /* Allow cards to grow and shrink but keep a reasonable minimum width */
+    flex: 1 1 220px;
+    /* Dark background for tile body */
+    background-color: #070b1f;
+    /* Inner spacing inside each tile */
+    padding: 16px;
+    /* Slightly rounded corners for a modern look */
+    border-radius: 8px;
+    /* Subtle border to define tile edges */
+    border: 1px solid #141933;
+}
+
+/* Heading for each CyberRisk service tile */
+.threat-card h3 {
+    /* Use amber gold for the tile titles */
+    color: #ffc857;
+    /* Slightly larger font than body text */
+    font-size: 1rem;
+    /* Margin below heading to separate from paragraph */
+    margin-bottom: 8px;
+}
+
+/* Body text inside each CyberRisk tile */
+.threat-card p {
+    /* Soft gray for readability on dark background */
+    color: #d0d4e6;
+    /* Comfortable line spacing */
+    line-height: 1.6;
+    /* Slightly smaller font size */
+    font-size: 0.9rem;
+}
+
+/* Wrapper for the “Defend Your Identity” section */
+.identity-section {
+    /* Limit max width of the side-by-side layout */
+    max-width: 1100px;
+    /* Center it horizontally */
+    margin: 32px auto;
+    /* Use flexbox for two-column layout */
+    display: flex;
+    /* Add horizontal gap between the two columns */
+    gap: 24px;
+    /* Align items to the top of the row */
+    align-items: flex-start;
+    /* Add a bit of horizontal padding for smaller screens */
+    padding: 0 16px;
+}
+
+/* Placeholder block for the identity image */
+.identity-image {
+    /* Share space equally with the text column */
+    flex: 1;
+    /* Dark background to resemble an image frame */
+    background-color: #070b1f;
+    /* Subtle border around the */
+    border: 1px solid #10152b;
+    /* Set a minimum height so it looks like a real image area */
+    min-height: 180px;
+    /* Center  text horizontally */
+    display: flex;
+    /* Center horizontally */
+    justify-content: center;
+    /* Center vertically */
+    align-items: center;
+    /* Inner padding  */
+    padding: 16px;
+    /*corner rounding */
+    border-radius: 8px;
+}
+
+/* Text styling for placeholder label */
+.identity-image p {
+    /* Muted color */
+    color: #9ca3c0;
+    /* smaller text */
+    font-size: 0.9rem;
+}
+
+/* Right column with heading and descriptive text */
+.identity-content {
+    /* Let this column take ore space than the image */
+    flex: 1.2;
+}
+
+/* Main heading for the Defend Your Identity section */
+.identity-content h2 {
+    /* Amber gold heading color to stand out */
+    color: #ffc857;
+    /* Margin under the heading */
+    margin-bottom: 8px;
+}
+
+/* Subtitle “Prevent & Protect” */
+.identity-subtitle {
+    /* Use electric blue to keep accent consistent */
+    color: #00aaff;
+    /* Slightly smaller than main heading */
+    font-size: 1rem;
+    /* Space under subtitle before the paragraph */
+    margin-bottom: 10px;
+}
+
+/* Body text in the identity section */
+.identity-content p {
+    /* Soft gray text for readability */
+    color: #d0d4e6;
+    /* Comfortable line height */
+    line-height: 1.6;
+    /* Standard readable font size */
+    font-size: 0.95rem;
+}
+
+/* Wrapper for the bottom Case Studies section on page 3 */
+.threat-cases {
+    /* Dark background to visually separate from identity section */
+    background-color: #020309;
+    /* Vertical padding around the case study area */
+    padding: 32px 0 40px 0;
+}
+
+/* Ensure all images scale inside their containers */
+img {
+    max-width: 100%;   /* Image never overflows container */
+    height: auto;      /* Keeps image proportional */
+    display: block;    /* Removes inline spacing */
+}
+
+/* Hero image container */
+.hero-video {
+    height: 300px;              /* Controls visible hero height */
+    overflow: hidden;           /* Crops image if too tall */
+    border-radius: 8px;
+}
+
+/* Hero image itself */
+.hero-video img {
+    width: 100%;                /* Fill container width */
+    height: 100%;               /* Fill container height */
+    object-fit: cover;          /* Crop instead of stretch */
+}
+
+/* Partner logo container */
+.partner-logo {
+    height: 60px;               /* Uniform logo height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Partner logo images */
+.partner-logo img {
+    max-height: 40px;           /* Keeps logos small and clean */
+    width: auto;
+}
+
+/* Support image container */
+.support-image {
+    height: 220px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Support image itself */
+.support-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hero image == Artifical Intelligence page == */
+.page-hero-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Case Study Cards == Artificial Intelligence page == */
+.case-image {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* Hero image == Cybersecurity page == */
+.threat-hero-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
